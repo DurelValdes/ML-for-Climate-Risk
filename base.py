@@ -66,6 +66,10 @@ def generate_dynamic_name(gz_filename):
         return "swi_daily_2020-2024.csv"
     elif "adcca99a" in base:
         return "swi_daily_2025.csv"
+    elif "da6cd598" in base:
+        return "swi_daily_2010-2019.csv"
+    elif "10d2ce77" in base:
+        return "swi_daily_2000-2009.csv"
     else:
         return f"{base}.csv"
 
@@ -110,7 +114,9 @@ def load_limite_admin(folder_path):
 def main():
     urls_swi_daily = [
         "https://www.data.gouv.fr/api/1/datasets/r/92065ec0-ea6f-4f5e-8827-4344179c0a7f",
-        "https://www.data.gouv.fr/api/1/datasets/r/adcca99a-6db0-495a-869f-40c888174a57"
+        "https://www.data.gouv.fr/api/1/datasets/r/adcca99a-6db0-495a-869f-40c888174a57",
+        "https://www.data.gouv.fr/api/1/datasets/r/da6cd598-498b-4e39-96ea-fae89a4a8a46",
+        "https://www.data.gouv.fr/api/1/datasets/r/10d2ce77-5c3b-44f8-bb46-4df27ed48595"
     ]
     urls = {
         "swi_uniforme": "https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Swi/SWI_Package_1969-2024.zip",
